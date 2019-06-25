@@ -1,4 +1,9 @@
-clear all 
+/***************************************************************************************************
+Program: Example Master Do-File for User Written Project Command
+Author: Konrad Franco (klfranco@ucdavis.edu)
+Date: June 2019
+***************************************************************************************************/
+clear all
 set more off
 set varabbrev off								// For long projects, it's best not to abbreviate
 set linesize 132								// Use 7pt font for printing
@@ -8,7 +13,7 @@ project, doinfo
 	local dofile "`r(dofile)'"					// Do file's stub name
 	local sig {bind: {hi: [RP: `dofile'.do]}}	// Add a signature in the notes
 
-	local rawdata "`pdir/rawdata"				// Name the local macro for the rawdata sub directory
+	local data "`pdir/data"						// Name the local macro for the rawdata sub directory
 	local code "`pdir'/code"					// Name the local macro for the code sub directory
 	local analysis "`code'/analysis"			// Name the local macro for the analysis sub directory
 	local figures "`code'/figures"				// Name the local macro for the figures sub directory
