@@ -1,4 +1,4 @@
-# A Stata Guide on the Useful User Written Command `Project` by Richard Picard
+# A Guide on the User Written Stata `Project` Command by Richard Picard
 
 June 2019
 
