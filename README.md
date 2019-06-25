@@ -1,4 +1,4 @@
-# A Guide on the Stata `Project` Command from Richard Picard
+# A Guide on the Stata `Project` Command from R. Picard
 
 June 2019
 
