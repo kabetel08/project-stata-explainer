@@ -16,3 +16,17 @@ original(filename): indicate an input file dependency for a currently running do
 `doinfo` retrieve project info within a do-file
 
 `break` stop execution of the build from within a do-file, the data in memory is preserved
+
+`build` build the project by running the master do-file
+
+`list(options)` list files in the project, use the `index` option to list projects alphabetically, use the `directory` option to list files by directory, use the `concordance` option to produce a dependency do-file concordance table, use the `archive` option to list project files that would be copied to the archive directory by the archive task, use the `cleanup` option to list the files that would be moved to the archive directory because they are in the project folder but not included in the project
+
+`validate` validate a build by checking that the project files have not changed since the last build 
+
+`replicate` completely rebuild the project and check that all created files for differences 
+
+`archive` copy files that have changed since the last archive to the archive directory
+
+`cleanup` move files that are in the project directory but are not referenced within the build
+
+`rmcreated` erase all files created by the project
