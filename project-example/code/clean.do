@@ -1,5 +1,5 @@
 /***************************************************************************************************
-Program: Example Do File for Creating a Figure with the User Written Project Command
+Program: Example Do File for Wrangling, Cleaning and Managing Data with the User Written Project Command
 Author: Konrad Franco (klfranco@ucdavis.edu)
 Date: June 2019
 ***************************************************************************************************/
@@ -26,19 +26,8 @@ local output "'pdir'/output"
 
 if doasproject==1 {
 	project, original("`data'/auto.dta")
-	project, uses("`data'/auto_clean.dta")
 }
-
-use "`data'/auto.dta"
-histogram rep78, by(foreign)
-graph export "`output'/fig1.png", replace
-
-use "`data'/auto_clean.dta"
-histogram rep78_new, by(foreign_new)
-graph export "`output'/fig2.png", replace
 
 if `doasproject'==1 {
-	project, creates("`output'/fig1.png")
-	project, creates("`output'/fig2.png")
+	project, creates("`data'/auto_clean.dta")
 }
-
