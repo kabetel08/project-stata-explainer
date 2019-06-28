@@ -14,7 +14,7 @@ if _rc == 0 {
 
 // if there is no project being built I still want to run the do file though so I can set alternative locals to acccomplish that
 else {
-	local pdir "~/example_project"
+	local pdir "C:\Users\konra\Documents\GitHub\project-stata-explainer\project-example"
 	local dofile "regression"
 	local doasproject = 0
 }

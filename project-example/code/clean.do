@@ -14,12 +14,13 @@ if _rc == 0 {
 
 // if there is no project being built I still want to run the do file though so I can set alternative locals to acccomplish that
 else {
-	local pdir "~/example_project"
-	local dofile "figures"
+	local pdir "/project-example"
+	local dofile "clean"
 	local doasproject = 0
 }
 
 set more off
+di "`pdir'"
 local data "`pdir'/data"
 local output "`pdir'/output"
 
