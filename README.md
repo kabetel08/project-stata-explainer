@@ -23,8 +23,7 @@ This prompt will rebuild the entire project and check for differences among all 
 
 You can easily clear all the files that the project created by running the prompt: `project example, rmcreated.` This will erase all files in the main directory that were created by the project. 
 
-Sometimes it is useful to share your work. You can do this easily by typing: `project example, share(alltime)` This prompt will share all files, irrespective of when they were added/modified. However you may only wish to share the original (i.e., raw data) and/or code for your project. In that case you can tell Stata to not share any of the files created by the project by typing: `project example, share(nocreated).`
-
+Sometimes it is useful to share your work. You can do this easily by typing: `project example, share(alltime)` This prompt will share all files, irrespective of when they were added/modified. However you may only wish to share the original (i.e., raw data) and/or code for your project. In that case you can tell Stata to not share any of the files created by the project by typing: `project example, share(nocreated).` Both these share command create a sub-folder in the archive folder. The sub-folder is stamped with the data and a file ID. You can share that folder with anybody and they can effortlessly build or replicate the entire project locally on their machine. If you have multiple people you wish to repeatedly share the folder with you can specify a name by typing: `project example, share(name).` copies to an archive directory all files that have been added or have changed since the last time files were shared with "name". 
 
 The Wiki for this page contains a review of: 
   1. the motivation for using the command
