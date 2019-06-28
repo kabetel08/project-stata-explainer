@@ -17,14 +17,12 @@ You can obtain a useful concordance table for your project by typing: `project e
 This prompt generates a nice tables that lists the dependencies for each do-file.
 
 You can even create an archive of your project by typing: `project example, archive.`
-As you project evolves you can run this archive command sometimes and it will archive all the components of your project that haven't changed since the last time you moved things to the archive. 
+As you project evolves you can run this archive command sometimes and it will archive all the components of your project that haven't changed since the last time you moved things to the archive. When work is finished on a project, you have a self contained project with all code, data, figures, and tables within a master directory (and a bunch of subdirectories, each of which can contain subdirectories, and so on) that can be zipped and submitted in support of a manuscript to a journal. Anyone can download the archive and the code will run on any platform (Mac, PC, etc) without having to make a single change to adjust for file paths.
 
 You can replicate your entire project by typing `project example, replicate.` 
 This prompt will rebuild the entire project and check for differences among all the files that were created from the nested do-files in the master script. 
 
 You can easily clear all the files that the project created by running the prompt: `project example, rmcreated.` This will erase all files in the main directory that were created by the project. 
-
-When work is finished on a project, you have a self contained project with all code, data, figures, and tables within a master directory (and a bunch of subdirectories, each of which can contain subdirectories, and so on) that can be zipped and submitted in support of a manuscript to a journal. Anyone can download the archive and the code will run on any platform (Mac, PC, etc) without having to make a single change to adjust for file paths.
 
 Sometimes it is useful to share your work. You can do this easily by typing: `project example, share(alltime)` This prompt will share all files, irrespective of when they were added/modified. However you may only wish to share the original (i.e., raw data) and/or code for your project. In that case you can tell Stata to not share any of the files created by the project by typing: `project example, share(nocreated).` Both these share command create a sub-folder in the archive folder. The sub-folder is stamped with the data and a file ID. You can share that folder with anybody and they can effortlessly build or replicate the entire project locally on their machine. If you have multiple people you wish to repeatedly share the folder with you can specify a name by typing: `project example, share(name).` copies to an archive directory all files that have been added or have changed since the last time files were shared with "name". 
 
