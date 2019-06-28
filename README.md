@@ -7,6 +7,14 @@ Konrad Franco (klfranco@ucdavis.edu)
 The included example project file contains a reproductible working example for Stata users through Version 15.1.
 In order to experiment with my example, please download the folder called **project-example.**
 
+
+The Wiki for this page contains a review of: 
+  1. the motivation for using the command
+  2. what the command can and cannot do 
+  3. how to install and set-up the comamnd
+  4. the project management tasks 
+  5. the build directives
+  
 Then set-up the project by typing: `project, setmaster("[filepath]\project-example\example.do") textlog`
 This command tells Stata to use the do filed titled **example.do.** as the primary "master do-file." All the other do-files are nested within the do-file called **example.do.**
 
@@ -26,10 +34,4 @@ You can easily clear all the files that the project created by running the promp
 
 Sometimes it is useful to share your work. You can do this easily by typing: `project example, share(alltime)` This prompt will share all files, irrespective of when they were added/modified. However you may only wish to share the original (i.e., raw data) and/or code for your project. In that case you can tell Stata to not share any of the files created by the project by typing: `project example, share(nocreated).` Both these share command create a sub-folder in the archive folder. The sub-folder is stamped with the data and a file ID. You can share that folder with anybody and they can effortlessly build or replicate the entire project locally on their machine. If you have multiple people you wish to repeatedly share the folder with you can specify a name by typing: `project example, share(name).` copies to an archive directory all files that have been added or have changed since the last time files were shared with "name". 
 
-The Wiki for this page contains a review of: 
-  1. the motivation for using the command
-  2. what the command can and cannot do 
-  3. how to install and set-up the comamnd
-  4. the project management tasks 
-  5. the build directives
-  
+I have added a bit of extra functionality to the `project` command by adding a local titled `doasproject` in the example files included. Normally you have to run `project example, build` everytime you wish to test whether or not your do-file works. This is ok because `project` is smart and only runs the do-files that haven't changed. However, the only way to invoke `project` is from the Stata command line, which can be bothersome if you are doing experimental edits with your do-file. Sometimes I wish to test my do-file by running the whole script from my do-file editor directly. The added local `doasproject` allows me to accomplish this goal. For example if I am working on the do-file "regression.do" and I want to test the output I don't have make a change and then re-run building the project from the command line. I can simply highlight all the code in the "regression.do" script or use my keyboard hot-key to "run all." The example scripts I have included are different from the example files provided by Picard because the first line of my do-files checks to see if there is a project being built. If there's not one actively being built it allows the script to continuing running and sets the local `doasproject` equal to 1. 
