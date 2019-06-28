@@ -9,11 +9,11 @@ In order to experiment with my example, please download the folder called **proj
 
 
 The Wiki for this page contains a review of: 
-  1. the motivation for using the command[why]
-  2. what the command can and cannot do[install]
-  3. how to install and set-up the comamnd[setup]
-  4. the project management tasks[projectmng]
-  5. the build directives[directives]
+  1. [the motivation for using the command][why]
+  2. [what the command can and cannot do][install]
+  3. [how to install and set-up the comamnd][setup]
+  4. [the project management tasks][projectmng]
+  5. [the build directives][directives]
   
 Then set-up the project by typing: `project, setmaster("[filepath]\project-example\example.do") textlog`
 This command tells Stata to use the do filed titled **example.do.** as the primary "master do-file." All the other do-files are nested within the do-file called **example.do.**
